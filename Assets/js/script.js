@@ -3,6 +3,7 @@
 var today = dayjs();
 $('#currentDay').text(today.format('dddd, MMM D, YYYY'));
 
+
 $('.time-block').each(function () {
   var blockHour = parseInt($(this).attr('id').split('-')[1]);
   if (blockHour < dayjs().hour()) {
@@ -14,6 +15,7 @@ $('.time-block').each(function () {
   }
 })
 
+// saves the users input to local storage
 var saveBtn = $('.saveBtn')
 
 saveBtn.on('click', function(event) {
@@ -21,10 +23,10 @@ saveBtn.on('click', function(event) {
   var input = $(event.target).siblings('textarea').val()
   var mainDiv = $(event.target).parent('div').attr('id')
   localStorage.setItem(mainDiv, input)
-  renderInput()
 })
 
+// makes the users saved input persist even when the page reloads
 function renderInput() {
-  var lastInpu = JSON.parse(localStorage.getItem("input"));
-  return
+  var lastInput = JSON.parse(localStorage.getItem("mainDiv"));
+  return lastInput
   }
