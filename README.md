@@ -31,4 +31,7 @@ https://github.com/sarahlang9800/work-day-scheduler
 ![Work Day Scheduler Example Picture](/Assets/images/work-day-scheduler-exaple-photo.png)
 
 ## Discription 
-* 
+* Added time blocks for the hours of 9-5, a normal work day.
+* When the page loads the current day is displayed.
+* Dynamically adds color classes for past, present, and future.
+* User input is saved to local storage and persists even when the page is re-loaded. 
